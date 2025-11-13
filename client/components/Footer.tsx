@@ -12,7 +12,8 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Hendry Mike</h3>
             <p className="text-slate-400">
-              Data Analyst & Digital Associate passionate about transforming data into insights.
+              Data Analyst & Digital Associate passionate about transforming
+              data into insights.
             </p>
           </div>
 
@@ -21,22 +22,34 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2 text-slate-400">
               <li>
-                <a href="#about" className="hover:text-yellow-500 transition-colors">
+                <a
+                  href="#about"
+                  className="hover:text-yellow-500 transition-colors"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#skills" className="hover:text-yellow-500 transition-colors">
+                <a
+                  href="#skills"
+                  className="hover:text-yellow-500 transition-colors"
+                >
                   Skills
                 </a>
               </li>
               <li>
-                <a href="#experience" className="hover:text-yellow-500 transition-colors">
+                <a
+                  href="#experience"
+                  className="hover:text-yellow-500 transition-colors"
+                >
                   Experience
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-yellow-500 transition-colors">
+                <a
+                  href="#projects"
+                  className="hover:text-yellow-500 transition-colors"
+                >
                   Projects
                 </a>
               </li>
@@ -109,7 +122,8 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-slate-700 pt-8 text-center text-slate-400">
           <p className="flex items-center justify-center gap-2">
-            Made with <Heart size={18} className="text-yellow-500" /> by Hendry Mike
+            Made with <Heart size={18} className="text-yellow-500" /> by Hendry
+            Mike
             <span className="ml-2">© {currentYear}. All rights reserved.</span>
           </p>
         </div>

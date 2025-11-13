@@ -15,7 +15,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo/Name */}
         <div className="flex items-center gap-3">
-          <img 
+          <img
             src="https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2Fe38df59139b04878b604b0bf4d681edc?format=webp&width=100"
             alt="Hendry Mike"
             className="w-10 h-10 rounded-full object-cover"
@@ -28,25 +28,25 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <button 
+          <button
             onClick={() => scrollToSection("about")}
             className="text-slate-600 hover:text-slate-900 transition-colors font-medium text-sm"
           >
             About
           </button>
-          <button 
+          <button
             onClick={() => scrollToSection("skills")}
             className="text-slate-600 hover:text-slate-900 transition-colors font-medium text-sm"
           >
             Skills
           </button>
-          <button 
+          <button
             onClick={() => scrollToSection("experience")}
             className="text-slate-600 hover:text-slate-900 transition-colors font-medium text-sm"
           >
             Experience
           </button>
-          <button 
+          <button
             onClick={() => scrollToSection("projects")}
             className="text-slate-600 hover:text-slate-900 transition-colors font-medium text-sm"
           >
@@ -56,7 +56,7 @@ export default function Header() {
 
         {/* Social Links */}
         <div className="flex items-center gap-4">
-          <a 
+          <a
             href="https://github.com/mkhontohendry300-stack"
             target="_blank"
             rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export default function Header() {
           >
             <Github size={20} />
           </a>
-          <a 
+          <a
             href="https://www.linkedin.com/in/hendry-mike-mkhonto-189904220"
             target="_blank"
             rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function Header() {
           >
             <Linkedin size={20} />
           </a>
-          <a 
+          <a
             href="mailto:mkhontohendry300@gmail.com"
             className="text-slate-600 hover:text-yellow-500 transition-colors"
             title="Email"
@@ -83,7 +83,7 @@ export default function Header() {
           </a>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-slate-600 hover:text-slate-900"
           >
@@ -95,25 +95,25 @@ export default function Header() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className="md:hidden border-t border-slate-200 bg-slate-50 px-6 py-4 space-y-3">
-          <button 
+          <button
             onClick={() => scrollToSection("about")}
             className="block w-full text-left text-slate-600 hover:text-slate-900 transition-colors font-medium py-2"
           >
             About
           </button>
-          <button 
+          <button
             onClick={() => scrollToSection("skills")}
             className="block w-full text-left text-slate-600 hover:text-slate-900 transition-colors font-medium py-2"
           >
             Skills
           </button>
-          <button 
+          <button
             onClick={() => scrollToSection("experience")}
             className="block w-full text-left text-slate-600 hover:text-slate-900 transition-colors font-medium py-2"
           >
             Experience
           </button>
-          <button 
+          <button
             onClick={() => scrollToSection("projects")}
             className="block w-full text-left text-slate-600 hover:text-slate-900 transition-colors font-medium py-2"
           >

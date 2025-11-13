@@ -9,10 +9,10 @@ const experiences = [
     description: [
       "Assisting in digital innovation and data-driven business solutions.",
       "Supporting project teams with data analysis and technology integration.",
-      "Contributing to digital upskilling and automation initiatives."
+      "Contributing to digital upskilling and automation initiatives.",
     ],
     color: "border-yellow-500",
-    bgColor: "bg-yellow-50"
+    bgColor: "bg-yellow-50",
   },
   {
     title: "Junior Data Analyst",
@@ -22,10 +22,10 @@ const experiences = [
     description: [
       "Conducted data cleaning, modeling, and visualization on socio-economic projects.",
       "Developed Python models to quantify the informal sector's impact on GDP.",
-      "Applied community detection algorithms using NetworkX and Pandas."
+      "Applied community detection algorithms using NetworkX and Pandas.",
     ],
     color: "border-purple-500",
-    bgColor: "bg-purple-50"
+    bgColor: "bg-purple-50",
   },
   {
     title: "Volunteer Peer Helper",
@@ -35,11 +35,11 @@ const experiences = [
     description: [
       "Provided academic and emotional support to students.",
       "Facilitated workshops on mental health and exam preparation.",
-      "Maintained confidentiality while supporting diverse student populations."
+      "Maintained confidentiality while supporting diverse student populations.",
     ],
     color: "border-blue-500",
-    bgColor: "bg-blue-50"
-  }
+    bgColor: "bg-blue-50",
+  },
 ];
 
 export default function Experience() {
@@ -59,11 +59,17 @@ export default function Experience() {
               {/* Timeline dot */}
               <div className="absolute left-[-12px] top-0 w-6 h-6 bg-yellow-500 rounded-full border-4 border-white"></div>
 
-              <div className={`p-6 rounded-xl ${exp.bgColor} border border-slate-200`}>
+              <div
+                className={`p-6 rounded-xl ${exp.bgColor} border border-slate-200`}
+              >
                 <div className="flex items-start justify-between mb-4 flex-wrap gap-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-900">{exp.title}</h3>
-                    <p className="text-slate-600 font-semibold">{exp.company}</p>
+                    <h3 className="text-2xl font-bold text-slate-900">
+                      {exp.title}
+                    </h3>
+                    <p className="text-slate-600 font-semibold">
+                      {exp.company}
+                    </p>
                   </div>
                   <div className="flex items-center gap-2 text-slate-600 text-sm whitespace-nowrap">
                     <Calendar size={16} />

@@ -5,26 +5,31 @@ const skillCategories = [
     title: "Programming Languages",
     icon: Code2,
     skills: ["Python", "R", "MATLAB", "SQL", "JavaScript", "HTML", "CSS"],
-    color: "bg-blue-50 border-blue-200"
+    color: "bg-blue-50 border-blue-200",
   },
   {
     title: "Statistical Tools",
     icon: Database,
     skills: ["SAS", "GitHub", "Vercel", "Excel"],
-    color: "bg-purple-50 border-purple-200"
+    color: "bg-purple-50 border-purple-200",
   },
   {
     title: "Soft Skills",
     icon: Brain,
     skills: ["Problem Solving", "Teamwork", "Communication", "Adaptability"],
-    color: "bg-green-50 border-green-200"
+    color: "bg-green-50 border-green-200",
   },
   {
     title: "Specializations",
     icon: Zap,
-    skills: ["Data Visualization", "Statistical Modeling", "Machine Learning", "Digital Transformation"],
-    color: "bg-yellow-50 border-yellow-200"
-  }
+    skills: [
+      "Data Visualization",
+      "Statistical Modeling",
+      "Machine Learning",
+      "Digital Transformation",
+    ],
+    color: "bg-yellow-50 border-yellow-200",
+  },
 ];
 
 export default function Skills() {
@@ -47,7 +52,9 @@ export default function Skills() {
                   <div className="p-3 bg-yellow-500 rounded-lg">
                     <Icon size={24} className="text-slate-900" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">{category.title}</h3>
+                  <h3 className="text-xl font-bold text-slate-900">
+                    {category.title}
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill) => (

@@ -33,7 +33,8 @@ function Counter({ target, label }: { target: number; label: string }) {
 export default function Hero() {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2Fe38df59139b04878b604b0bf4d681edc";
+    link.href =
+      "https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2Fe38df59139b04878b604b0bf4d681edc";
     link.download = "Hendry_Mike_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -46,7 +47,9 @@ export default function Hero() {
         {/* Left Content */}
         <div className="flex flex-col justify-center space-y-6">
           <div className="space-y-3">
-            <p className="text-slate-600 text-base font-medium">Welcome to my portfolio</p>
+            <p className="text-slate-600 text-base font-medium">
+              Welcome to my portfolio
+            </p>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               <span className="text-slate-900">Mkhonto</span>
               <br />
@@ -58,7 +61,8 @@ export default function Hero() {
           </div>
 
           <p className="text-slate-600 text-base leading-relaxed max-w-lg">
-            Transforming raw data into actionable insights through statistical analysis, visualization, and strategic problem-solving.
+            Transforming raw data into actionable insights through statistical
+            analysis, visualization, and strategic problem-solving.
           </p>
 
           {/* CTA Buttons */}

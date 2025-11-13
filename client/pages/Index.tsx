@@ -1,5 +1,14 @@
 import { useState, useEffect } from "react";
-import { Mail, Github, Linkedin, ExternalLink, Code2, BarChart3, Brain, Zap } from "lucide-react";
+import {
+  Mail,
+  Github,
+  Linkedin,
+  ExternalLink,
+  Code2,
+  BarChart3,
+  Brain,
+  Zap,
+} from "lucide-react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
