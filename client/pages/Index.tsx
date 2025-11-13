@@ -20,22 +20,6 @@ export default function Index() {
       <Education />
       <Projects />
       <Footer />
-      
-      {/* Chatbot Widget */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <iframe 
-          src="https://share.chatling.ai/s/p9ACa8o9Ze9kPVg" 
-          title="Portfolio Assistant"
-          style={{
-            width: "400px",
-            height: "500px",
-            border: "none",
-            borderRadius: "12px",
-            boxShadow: "0 10px 40px rgba(0,0,0,0.15)"
-          }}
-          className="hidden md:block"
-        />
-      </div>
     </div>
   );
 }
