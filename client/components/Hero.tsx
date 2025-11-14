@@ -32,6 +32,9 @@ function Counter({ target, label }: { target: number; label: string }) {
 }
 
 export default function Hero() {
+  const handleDownloadCV = () => {
+    generateResumePDF();
+  };
 
   return (
     <section className="w-full py-16 md:py-24 px-6 bg-gradient-to-br from-white to-slate-50">
