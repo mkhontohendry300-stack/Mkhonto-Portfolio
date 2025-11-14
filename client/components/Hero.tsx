@@ -62,13 +62,6 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
-            <button
-              onClick={handleDownloadCV}
-              className="flex items-center gap-2 px-6 py-3 bg-yellow-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors shadow-md hover:shadow-lg"
-            >
-              <Download size={20} />
-              Download CV
-            </button>
             <a
               href="mailto:mkhontohendry300@gmail.com"
               className="flex items-center gap-2 px-6 py-3 border-2 border-slate-900 text-slate-900 rounded-lg font-semibold hover:bg-slate-50 transition-colors"
