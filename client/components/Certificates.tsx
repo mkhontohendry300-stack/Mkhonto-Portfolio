@@ -71,14 +71,13 @@ export default function Certificates() {
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
 
   return (
-    <section id="certificates" className="w-full py-20 md:py-28 px-6 bg-slate-50">
+    <section id="certificates" className="w-full py-20 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-          Professional <span className="text-yellow-500">Certifications</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">
+          Professional <span className="text-blue-600">Certifications</span>
         </h2>
         <p className="text-slate-600 mb-12 text-lg">
-          Continuous learning and skill development through recognized certifications
-          from industry leaders and online platforms.
+          Industry-recognized credentials demonstrating expertise and commitment to continuous professional development.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -86,24 +85,26 @@ export default function Certificates() {
             <div
               key={cert.id}
               onClick={() => setSelectedCert(cert)}
-              className="group cursor-pointer border-2 border-slate-200 rounded-xl overflow-hidden hover:border-yellow-500 hover:shadow-2xl transition-all duration-300 bg-white hover:scale-105 transform"
+              className="group cursor-pointer border border-slate-200 rounded-lg overflow-hidden hover:border-blue-300 hover:shadow-lg transition-all duration-300 bg-white hover:translate-y--1"
             >
               {/* Certificate Header */}
-              <div className="h-2 bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
+              <div className="h-1 bg-gradient-to-r from-blue-500 to-blue-600"></div>
 
               <div className="p-6">
                 {/* Issuer */}
-                <p className="text-sm font-semibold text-yellow-600 mb-2">
+                <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-3">
                   {cert.issuer}
                 </p>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-yellow-500 transition-colors line-clamp-2">
+                <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
                   {cert.title}
                 </h3>
 
                 {/* Date */}
-                <p className="text-sm text-slate-500 mb-4">📅 {cert.date}</p>
+                <p className="text-xs text-slate-500 mb-4 font-medium">
+                  {cert.date}
+                </p>
 
                 {/* Description */}
                 <p className="text-slate-600 mb-4 text-sm leading-relaxed line-clamp-3">
@@ -111,18 +112,18 @@ export default function Certificates() {
                 </p>
 
                 {/* Skills */}
-                <div className="mb-4">
+                <div className="mb-5">
                   <div className="flex flex-wrap gap-2">
                     {cert.skills.slice(0, 3).map((skill) => (
                       <span
                         key={skill}
-                        className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium"
+                        className="px-2.5 py-1 bg-blue-50 text-blue-700 rounded text-xs font-medium"
                       >
                         {skill}
                       </span>
                     ))}
                     {cert.skills.length > 3 && (
-                      <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">
+                      <span className="px-2.5 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">
                         +{cert.skills.length - 3}
                       </span>
                     )}
@@ -130,9 +131,9 @@ export default function Certificates() {
                 </div>
 
                 {/* Action Button */}
-                <button className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors text-sm w-full justify-center">
+                <button className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm w-full">
                   <ExternalLink size={16} />
-                  View Certificate
+                  View Details
                 </button>
               </div>
             </div>
