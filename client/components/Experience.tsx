@@ -11,8 +11,7 @@ const experiences = [
       "Supporting project teams with data analysis and technology integration.",
       "Contributing to digital upskilling and automation initiatives.",
     ],
-    color: "border-yellow-500",
-    bgColor: "bg-yellow-50",
+    color: "border-emerald-500",
   },
   {
     title: "Junior Data Analyst",
@@ -25,7 +24,6 @@ const experiences = [
       "Applied community detection algorithms using NetworkX and Pandas.",
     ],
     color: "border-purple-500",
-    bgColor: "bg-purple-50",
   },
   {
     title: "Volunteer Peer Helper",
@@ -37,17 +35,19 @@ const experiences = [
       "Facilitated workshops on mental health and exam preparation.",
       "Maintained confidentiality while supporting diverse student populations.",
     ],
-    color: "border-blue-500",
-    bgColor: "bg-blue-50",
+    color: "border-cyan-500",
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="w-full py-20 md:py-28 px-6 bg-white">
+    <section id="experience" className="w-full py-20 md:py-28 px-6 bg-slate-950">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-12">
-          Professional <span className="text-yellow-500">Experience</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">
+          Professional{" "}
+          <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+            Experience
+          </span>
         </h2>
 
         <div className="space-y-6">
@@ -57,35 +57,33 @@ export default function Experience() {
               className={`relative pl-8 pb-8 border-l-4 ${exp.color} last:pb-0`}
             >
               {/* Timeline dot */}
-              <div className="absolute left-[-12px] top-0 w-6 h-6 bg-yellow-500 rounded-full border-4 border-white"></div>
+              <div className="absolute left-[-12px] top-0 w-6 h-6 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-full border-4 border-slate-950"></div>
 
-              <div
-                className={`p-6 rounded-xl ${exp.bgColor} border border-slate-200`}
-              >
+              <div className="p-6 rounded-xl bg-slate-800 border border-slate-700">
                 <div className="flex items-start justify-between mb-4 flex-wrap gap-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-900">
+                    <h3 className="text-2xl font-bold text-white">
                       {exp.title}
                     </h3>
-                    <p className="text-slate-600 font-semibold">
+                    <p className="text-slate-300 font-semibold">
                       {exp.company}
                     </p>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 text-sm whitespace-nowrap">
+                  <div className="flex items-center gap-2 text-slate-400 text-sm whitespace-nowrap">
                     <Calendar size={16} />
                     {exp.period}
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 text-slate-600 mb-4">
+                <div className="flex items-center gap-2 text-slate-400 mb-4">
                   <MapPin size={16} />
                   {exp.location}
                 </div>
 
                 <ul className="space-y-2">
                   {exp.description.map((item, i) => (
-                    <li key={i} className="flex gap-3 text-slate-700">
-                      <span className="text-yellow-500 font-bold mt-1">•</span>
+                    <li key={i} className="flex gap-3 text-slate-300">
+                      <span className="text-emerald-400 font-bold mt-1">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
