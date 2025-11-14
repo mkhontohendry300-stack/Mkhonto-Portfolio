@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Download } from "lucide-react";
+import { generateResumePDF } from "../lib/resume";
 
 function Counter({ target, label }: { target: number; label: string }) {
   const [count, setCount] = useState(0);
@@ -32,13 +33,7 @@ function Counter({ target, label }: { target: number; label: string }) {
 
 export default function Hero() {
   const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href =
-      "https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2Fe38df59139b04878b604b0bf4d681edc";
-    link.download = "Hendry_Mike_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    generateResumePDF();
   };
 
   return (
