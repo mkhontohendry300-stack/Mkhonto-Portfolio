@@ -8,8 +8,8 @@ interface Certificate {
   date: string;
   description: string;
   skills: string[];
-  pdfUrl: string;
   verifyUrl?: string;
+  certificateNumber?: string;
 }
 
 const certificates: Certificate[] = [
@@ -19,10 +19,8 @@ const certificates: Certificate[] = [
     issuer: "DeepLearning.AI & Coursera",
     date: "September 22, 2025",
     description:
-      "Completed an online non-credit course on AI fundamentals authorized by DeepLearning.AI and offered through Coursera. This course provided comprehensive insights into AI concepts, applications, and impact across various industries.",
+      "Completed an online non-credit course on AI fundamentals authorized by DeepLearning.AI and offered through Coursera. This course provided comprehensive insights into AI concepts, applications, and impact across various industries. Verified and confirmed by Coursera.",
     skills: ["AI Fundamentals", "Machine Learning Basics", "AI Strategy"],
-    pdfUrl:
-      "https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2F497338a484174555a18912544ac25498?format=webp&width=800",
     verifyUrl: "https://coursera.org/verify/Z4IIJQW4T1LE",
   },
   {
@@ -40,8 +38,7 @@ const certificates: Certificate[] = [
       "UX Design",
       "GitHub",
     ],
-    pdfUrl:
-      "https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2F497338a484174555a18912544ac25498?format=webp&width=800",
+    certificateNumber: "AOTYPAA072025",
   },
   {
     id: "ai-ml-fundamentals",
@@ -49,10 +46,8 @@ const certificates: Certificate[] = [
     issuer: "Capaciti",
     date: "November 7, 2025",
     description:
-      "Achieved a certificate of achievement in AI & Machine Learning Fundamentals with an excellent score of 46/50 (92%). This course covered foundational concepts in artificial intelligence and machine learning, building strong analytical and problem-solving capabilities.",
+      "Achieved a certificate of achievement in AI & Machine Learning Fundamentals with an excellent score of 46/50 (92%). This course covered foundational concepts in artificial intelligence and machine learning, building strong analytical and problem-solving capabilities in ML algorithms and applications.",
     skills: ["Machine Learning", "AI Fundamentals", "Data Analysis", "Python"],
-    pdfUrl:
-      "https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2F497338a484174555a18912544ac25498?format=webp&width=800",
   },
   {
     id: "supervised-ml",
@@ -68,8 +63,6 @@ const certificates: Certificate[] = [
       "Machine Learning Algorithms",
       "Data Science",
     ],
-    pdfUrl:
-      "https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2F497338a484174555a18912544ac25498?format=webp&width=800",
     verifyUrl: "https://coursera.org/verify/SYAW7Q40JKRH",
   },
 ];
