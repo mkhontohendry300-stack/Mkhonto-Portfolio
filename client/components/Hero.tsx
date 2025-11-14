@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { Download } from "lucide-react";
-import { generateResumePDF } from "../lib/resume";
 
 function Counter({ target, label }: { target: number; label: string }) {
   const [count, setCount] = useState(0);
