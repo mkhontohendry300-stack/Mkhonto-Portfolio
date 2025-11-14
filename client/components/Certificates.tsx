@@ -143,56 +143,63 @@ export default function Certificates() {
 
       {/* Certificate Modal */}
       {selectedCert && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-4xl w-full max-h-96 overflow-y-auto">
+        <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+          <div className="bg-white rounded-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto shadow-2xl">
             {/* Modal Header */}
-            <div className="sticky top-0 bg-white border-b border-slate-200 p-6 flex justify-between items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-slate-900">
+            <div className="sticky top-0 bg-gradient-to-r from-blue-50 to-white border-b border-blue-100 px-8 py-6 flex justify-between items-start">
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-slate-900 mb-1">
                   {selectedCert.title}
                 </h3>
-                <p className="text-sm text-slate-600 mt-1">
+                <p className="text-sm text-blue-600 font-semibold">
                   {selectedCert.issuer}
                 </p>
               </div>
               <button
                 onClick={() => setSelectedCert(null)}
-                className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+                className="p-1 hover:bg-slate-100 rounded-lg transition-colors ml-4 flex-shrink-0"
               >
-                <X size={24} />
+                <X size={24} className="text-slate-500" />
               </button>
             </div>
 
             {/* Modal Content */}
-            <div className="p-8 space-y-6">
+            <div className="px-8 py-6 space-y-6">
               {/* Date */}
-              <div>
-                <p className="text-sm font-semibold text-slate-600 mb-2">
-                  Issue Date
-                </p>
-                <p className="text-lg text-slate-900">{selectedCert.date}</p>
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <span className="text-blue-600 font-bold">📅</span>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+                    Issue Date
+                  </p>
+                  <p className="text-lg text-slate-900 font-semibold mt-1">
+                    {selectedCert.date}
+                  </p>
+                </div>
               </div>
 
               {/* Description */}
-              <div>
-                <p className="text-sm font-semibold text-slate-600 mb-2">
+              <div className="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                <p className="text-sm font-semibold text-slate-900 mb-3">
                   About This Certification
                 </p>
-                <p className="text-slate-700 leading-relaxed">
+                <p className="text-slate-700 leading-relaxed text-sm">
                   {selectedCert.description}
                 </p>
               </div>
 
               {/* Skills Gained */}
               <div>
-                <p className="text-sm font-semibold text-slate-600 mb-3">
+                <p className="text-sm font-semibold text-slate-900 mb-3">
                   Skills & Knowledge
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {selectedCert.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-md text-sm font-medium"
                     >
                       {skill}
                     </span>
@@ -202,31 +209,31 @@ export default function Certificates() {
 
               {/* Certificate Details */}
               {selectedCert.certificateNumber && (
-                <div>
-                  <p className="text-sm font-semibold text-slate-600 mb-2">
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">
                     Certificate Number
                   </p>
-                  <p className="text-slate-900 font-mono text-sm">
+                  <p className="text-slate-900 font-mono text-sm font-semibold">
                     {selectedCert.certificateNumber}
                   </p>
                 </div>
               )}
 
               {/* Action Buttons */}
-              <div className="flex gap-3 pt-4 border-t border-slate-200">
+              <div className="flex gap-3 pt-6 border-t border-slate-200">
                 {selectedCert.verifyUrl && (
                   <a
                     href={selectedCert.verifyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-yellow-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
                     <ExternalLink size={18} />
                     Verify Certificate
                   </a>
                 )}
                 {!selectedCert.verifyUrl && (
-                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-yellow-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
+                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-slate-100 text-slate-700 rounded-lg font-semibold cursor-default">
                     <Download size={18} />
                     Certificate Earned
                   </button>
