@@ -252,24 +252,35 @@ export function generateResumePDF() {
   addSectionTitle("CERTIFICATIONS");
 
   const certifications = [
-    "Academic excellence award",
-    "Peer Helper Leadership skill",
-    "Peer Helper Certificate of Recognition"
+    { title: "Academic excellence award", date: "10/2023 - 10/2024" },
+    { title: "Peer Helper Leadership skill", date: "07/2024" },
+    { title: "Peer Helper Certificate of Recognition", date: "09/2024" },
+    { title: "AI For Everyone", date: "09/22/2025", issuer: "DeepLearning.AI & Coursera" },
+    { title: "Certificate in Full Stack Development (32 Credits)", date: "07/14/2025", issuer: "FNB App Academy 2025" },
+    { title: "AI & Machine Learning Fundamentals (Score: 46/50 - 92%)", date: "11/07/2025", issuer: "Capaciti" },
+    { title: "Supervised Machine Learning: Regression and Classification", date: "10/13/2025", issuer: "DeepLearning.AI & Stanford University" }
   ];
 
   doc.setFontSize(9);
   doc.setFont(undefined, "normal");
-  doc.text("• " + certifications[0], leftMargin, yPosition);
-  doc.text("10/2023 - 10/2024", pageWidth - rightMargin - 30, yPosition);
-  yPosition += 4;
 
-  doc.text("• " + certifications[1], leftMargin, yPosition);
-  doc.text("07/2024", pageWidth - rightMargin - 30, yPosition);
-  yPosition += 4;
+  certifications.forEach((cert, idx) => {
+    if (cert.issuer) {
+      doc.setFont(undefined, "bold");
+      doc.text("• " + cert.title, leftMargin, yPosition);
+      doc.setFont(undefined, "italic");
+      doc.text(cert.issuer, leftMargin + 5, yPosition + 3);
+      yPosition += 3;
+      doc.setFont(undefined, "normal");
+      doc.text(cert.date, pageWidth - rightMargin - 30, yPosition - 3);
+    } else {
+      doc.text("• " + cert.title, leftMargin, yPosition);
+      doc.text(cert.date, pageWidth - rightMargin - 30, yPosition);
+    }
+    yPosition += 4;
+  });
 
-  doc.text("• " + certifications[2], leftMargin, yPosition);
-  doc.text("09/2024", pageWidth - rightMargin - 30, yPosition);
-  yPosition += 6;
+  yPosition += 2;
 
   // References
   addSectionTitle("REFERENCES");
