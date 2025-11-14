@@ -23,7 +23,7 @@ function Counter({ target, label }: { target: number; label: string }) {
 
   return (
     <div className="text-center">
-      <div className="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">
+      <div className="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">
         {count}+
       </div>
       <p className="text-slate-600 text-sm md:text-base">{label}</p>
@@ -37,25 +37,25 @@ export default function Hero() {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 px-6 bg-gradient-to-br from-white to-slate-50">
+    <section className="w-full py-16 md:py-24 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="flex flex-col justify-center space-y-6">
           <div className="space-y-3">
-            <p className="text-slate-600 text-base font-medium">
+            <p className="text-slate-400 text-base font-medium uppercase tracking-wide">
               Welcome to my portfolio
             </p>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-              <span className="text-slate-900">Mkhonto</span>
+              <span className="text-white">Mkhonto</span>
               <br />
-              <span className="text-yellow-500">Hendry Mike</span>
+              <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Hendry Mike</span>
             </h1>
-            <p className="text-lg text-slate-700">
+            <p className="text-lg text-slate-300">
               Digital Associate | Data Analyst | Tech Enthusiast
             </p>
           </div>
 
-          <p className="text-slate-600 text-base leading-relaxed max-w-lg">
+          <p className="text-slate-400 text-base leading-relaxed max-w-lg">
             Transforming raw data into actionable insights through statistical
             analysis, visualization, and strategic problem-solving.
           </p>
@@ -64,14 +64,14 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4 pt-4">
             <button
               onClick={handleDownloadCV}
-              className="flex items-center gap-2 px-6 py-3 bg-yellow-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors shadow-md hover:shadow-lg"
+              className="flex items-center gap-2 px-6 py-3 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition-colors shadow-md hover:shadow-lg hover:shadow-emerald-500/50"
             >
               <Download size={20} />
               Download CV
             </button>
             <a
               href="mailto:mkhontohendry300@gmail.com"
-              className="flex items-center gap-2 px-6 py-3 border-2 border-slate-900 text-slate-900 rounded-lg font-semibold hover:bg-slate-50 transition-colors"
+              className="flex items-center gap-2 px-6 py-3 border-2 border-emerald-500 text-emerald-400 rounded-lg font-semibold hover:bg-emerald-500/10 transition-colors"
             >
               Get in Touch
             </a>
@@ -83,7 +83,7 @@ export default function Hero() {
           {/* Profile Image */}
           <div className="flex justify-center">
             <div className="relative w-72 h-72 md:w-80 md:h-80">
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-100 to-slate-100 rounded-3xl transform -rotate-6"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-3xl transform -rotate-6"></div>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2F497338a484174555a18912544ac25498?format=webp&width=800"
                 alt="Hendry Mike Mkhonto"
@@ -97,10 +97,10 @@ export default function Hero() {
             <Counter target={5} label="Projects" />
             <Counter target={2} label="Years Experience" />
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
                 CT
               </div>
-              <p className="text-slate-600 text-sm md:text-base">Cape Town</p>
+              <p className="text-slate-400 text-sm md:text-base">Cape Town</p>
             </div>
           </div>
         </div>
