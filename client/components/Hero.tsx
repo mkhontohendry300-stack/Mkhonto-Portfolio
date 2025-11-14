@@ -85,7 +85,7 @@ export default function Hero() {
             <div className="relative w-72 h-72 md:w-80 md:h-80">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-100 to-slate-100 rounded-3xl transform -rotate-6"></div>
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2Fe38df59139b04878b604b0bf4d681edc?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2F497338a484174555a18912544ac25498?format=webp&width=800"
                 alt="Hendry Mike Mkhonto"
                 className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-3xl relative z-10 shadow-2xl"
               />
