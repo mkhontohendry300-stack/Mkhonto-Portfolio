@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-slate-900 text-white">
+    <footer className="w-full bg-slate-950 text-white">
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -24,7 +24,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-yellow-500 transition-colors"
+                  className="hover:text-emerald-400 transition-colors"
                 >
                   About
                 </a>
@@ -32,7 +32,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#skills"
-                  className="hover:text-yellow-500 transition-colors"
+                  className="hover:text-emerald-400 transition-colors"
                 >
                   Skills
                 </a>
@@ -40,7 +40,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#experience"
-                  className="hover:text-yellow-500 transition-colors"
+                  className="hover:text-emerald-400 transition-colors"
                 >
                   Experience
                 </a>
@@ -48,7 +48,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#projects"
-                  className="hover:text-yellow-500 transition-colors"
+                  className="hover:text-emerald-400 transition-colors"
                 >
                   Projects
                 </a>
@@ -73,7 +73,7 @@ export default function Footer() {
             <div className="space-y-3">
               <a
                 href="mailto:mkhontohendry300@gmail.com"
-                className="flex items-center gap-2 text-slate-400 hover:text-yellow-500 transition-colors"
+                className="flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-colors"
               >
                 <Mail size={18} />
                 <span className="break-all">mkhontohendry300@gmail.com</span>
@@ -95,7 +95,7 @@ export default function Footer() {
               href="https://github.com/mkhontohendry300-stack"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-slate-800 rounded-full hover:bg-yellow-500 hover:text-slate-900 transition-colors"
+              className="p-3 bg-slate-800 rounded-full hover:bg-emerald-500 hover:text-white transition-colors"
               title="GitHub"
             >
               <Github size={24} />
@@ -104,14 +104,14 @@ export default function Footer() {
               href="https://www.linkedin.com/in/hendry-mike-mkhonto-189904220"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-slate-800 rounded-full hover:bg-yellow-500 hover:text-slate-900 transition-colors"
+              className="p-3 bg-slate-800 rounded-full hover:bg-emerald-500 hover:text-white transition-colors"
               title="LinkedIn"
             >
               <Linkedin size={24} />
             </a>
             <a
               href="mailto:mkhontohendry300@gmail.com"
-              className="p-3 bg-slate-800 rounded-full hover:bg-yellow-500 hover:text-slate-900 transition-colors"
+              className="p-3 bg-slate-800 rounded-full hover:bg-emerald-500 hover:text-white transition-colors"
               title="Email"
             >
               <Mail size={24} />
@@ -122,7 +122,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-slate-700 pt-8 text-center text-slate-400">
           <p className="flex items-center justify-center gap-2">
-            Made with <Heart size={18} className="text-yellow-500" /> by Hendry
+            Made with <Heart size={18} className="text-emerald-500" /> by Hendry
             Mike
             <span className="ml-2">© {currentYear}. All rights reserved.</span>
           </p>

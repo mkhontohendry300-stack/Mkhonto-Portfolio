@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-slate-200">
+    <header className="sticky top-0 z-40 bg-slate-950 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo/Name */}
         <div className="flex items-center gap-3">
@@ -21,8 +21,8 @@ export default function Header() {
             className="w-10 h-10 rounded-full object-cover"
           />
           <div>
-            <h1 className="font-bold text-slate-900">Hendry Mike</h1>
-            <p className="text-xs text-slate-600">Data Analyst</p>
+            <h1 className="font-bold text-white">Hendry Mike</h1>
+            <p className="text-xs text-emerald-400">Data Analyst</p>
           </div>
         </div>
 
@@ -30,25 +30,25 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-8">
           <button
             onClick={() => scrollToSection("about")}
-            className="text-slate-600 hover:text-slate-900 transition-colors font-medium text-sm"
+            className="text-slate-400 hover:text-emerald-400 transition-colors font-medium text-sm"
           >
             About
           </button>
           <button
             onClick={() => scrollToSection("skills")}
-            className="text-slate-600 hover:text-slate-900 transition-colors font-medium text-sm"
+            className="text-slate-400 hover:text-emerald-400 transition-colors font-medium text-sm"
           >
             Skills
           </button>
           <button
             onClick={() => scrollToSection("experience")}
-            className="text-slate-600 hover:text-slate-900 transition-colors font-medium text-sm"
+            className="text-slate-400 hover:text-emerald-400 transition-colors font-medium text-sm"
           >
             Experience
           </button>
           <button
             onClick={() => scrollToSection("projects")}
-            className="text-slate-600 hover:text-slate-900 transition-colors font-medium text-sm"
+            className="text-slate-400 hover:text-emerald-400 transition-colors font-medium text-sm"
           >
             Projects
           </button>
@@ -60,7 +60,7 @@ export default function Header() {
             href="https://github.com/mkhontohendry300-stack"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-600 hover:text-yellow-500 transition-colors"
+            className="text-slate-400 hover:text-emerald-400 transition-colors"
             title="GitHub"
           >
             <Github size={20} />
@@ -69,14 +69,14 @@ export default function Header() {
             href="https://www.linkedin.com/in/hendry-mike-mkhonto-189904220"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-600 hover:text-yellow-500 transition-colors"
+            className="text-slate-400 hover:text-emerald-400 transition-colors"
             title="LinkedIn"
           >
             <Linkedin size={20} />
           </a>
           <a
             href="mailto:mkhontohendry300@gmail.com"
-            className="text-slate-600 hover:text-yellow-500 transition-colors"
+            className="text-slate-400 hover:text-emerald-400 transition-colors"
             title="Email"
           >
             <Mail size={20} />
@@ -85,7 +85,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-slate-600 hover:text-slate-900"
+            className="md:hidden text-slate-400 hover:text-emerald-400"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -94,28 +94,28 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <nav className="md:hidden border-t border-slate-200 bg-slate-50 px-6 py-4 space-y-3">
+        <nav className="md:hidden border-t border-slate-800 bg-slate-900 px-6 py-4 space-y-3">
           <button
             onClick={() => scrollToSection("about")}
-            className="block w-full text-left text-slate-600 hover:text-slate-900 transition-colors font-medium py-2"
+            className="block w-full text-left text-slate-400 hover:text-emerald-400 transition-colors font-medium py-2"
           >
             About
           </button>
           <button
             onClick={() => scrollToSection("skills")}
-            className="block w-full text-left text-slate-600 hover:text-slate-900 transition-colors font-medium py-2"
+            className="block w-full text-left text-slate-400 hover:text-emerald-400 transition-colors font-medium py-2"
           >
             Skills
           </button>
           <button
             onClick={() => scrollToSection("experience")}
-            className="block w-full text-left text-slate-600 hover:text-slate-900 transition-colors font-medium py-2"
+            className="block w-full text-left text-slate-400 hover:text-emerald-400 transition-colors font-medium py-2"
           >
             Experience
           </button>
           <button
             onClick={() => scrollToSection("projects")}
-            className="block w-full text-left text-slate-600 hover:text-slate-900 transition-colors font-medium py-2"
+            className="block w-full text-left text-slate-400 hover:text-emerald-400 transition-colors font-medium py-2"
           >
             Projects
           </button>
