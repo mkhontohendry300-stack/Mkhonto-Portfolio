@@ -199,27 +199,36 @@ export default function Certificates() {
                 </div>
               </div>
 
+              {/* Certificate Details */}
+              {selectedCert.certificateNumber && (
+                <div>
+                  <p className="text-sm font-semibold text-slate-600 mb-2">
+                    Certificate Number
+                  </p>
+                  <p className="text-slate-900 font-mono text-sm">
+                    {selectedCert.certificateNumber}
+                  </p>
+                </div>
+              )}
+
               {/* Action Buttons */}
               <div className="flex gap-3 pt-4 border-t border-slate-200">
-                <a
-                  href={selectedCert.pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-yellow-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
-                >
-                  <Download size={18} />
-                  Download Certificate
-                </a>
                 {selectedCert.verifyUrl && (
                   <a
                     href={selectedCert.verifyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border-2 border-yellow-500 text-yellow-500 rounded-lg font-semibold hover:bg-yellow-50 transition-colors"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-yellow-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
                   >
                     <ExternalLink size={18} />
-                    Verify Online
+                    Verify Certificate
                   </a>
+                )}
+                {!selectedCert.verifyUrl && (
+                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-yellow-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
+                    <Download size={18} />
+                    Certificate Earned
+                  </button>
                 )}
               </div>
             </div>
