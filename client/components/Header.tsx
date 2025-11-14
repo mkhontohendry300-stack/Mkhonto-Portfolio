@@ -16,7 +16,7 @@ export default function Header() {
         {/* Logo/Name */}
         <div className="flex items-center gap-3">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2Fe38df59139b04878b604b0bf4d681edc?format=webp&width=100"
+            src="https://cdn.builder.io/api/v1/image/assets%2Fa80f79bc5ff34336ac1496ec1a885787%2F497338a484174555a18912544ac25498?format=webp&width=100"
             alt="Hendry Mike"
             className="w-10 h-10 rounded-full object-cover"
           />
